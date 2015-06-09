@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="10,10" size="280,140">
+    <action name="Login" location="65,47" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.html" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.html" />
+      </result>
+    </action>
+  </package>
+  <webResource name="success.html" path="/success.html" location="75,192" size="150,55" />
+  <webResource name="error.html" path="/error.html" location="355,52" size="150,55" />
+</Struts2Diagram>
+

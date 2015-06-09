@@ -1,0 +1,157 @@
+@CHARSET "GBK";
+body {
+	line-height: 1.6;
+	font-family:Helvetica,Arial,Tahoma,"Î¢ÈíÑÅºÚ""Ó×Ô²";
+	color: #222;
+	font-size: 14px;
+	margin:2 2 2 2;
+}
+#header {
+	border-top: 5px solid #44b549;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	position: relative;
+	position: relative;
+	z-index: 1;
+}
+#header .wrapper {
+position: relative;
+position: relative;
+line-height: 60px;
+}
+.counter{
+	position: absolute;
+	top: 25px;
+	right: 0;
+	padding: 25px 35px 20px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+	-moz-box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+	background-color: #FFF;
+}
+.counter1{
+	width:350px;
+	top: 25px;
+	right: 0;
+	padding: 25px 35px 20px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+	-moz-box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.5),-3px -3px 1px rgba(0,0,0,0.5);
+	background-color: #FFF;
+	margin-left:300px;
+	margin-top:100px;
+}
+#banner {
+	background: transparent url(market1.jpg) no-repeat center center;
+	background-color: #090b1a;
+}
+#banner .wrapper {
+	height: 460px;
+	position: relative;
+	position: relative;
+}
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+.login-btn-panel {
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+.login-btn {
+	display: inline-block;
+	display: inline-block;
+	width: 120px;
+	margin-right: 15px;
+	line-height: 35px;
+	background-color: #44b549;
+	color: #fff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	text-align: center;
+	
+}
+a {
+	cursor: pointer;
+}
+.login-btn-panel input{
+	cursor:pointer;
+}
+#footer {
+	font-size: 12px;
+	margin-top:20px;
+	padding: 30px 0;
+	background-color: #b9b8b8;
+	text-align: center;
+	text-align: center;
+	color: #fff;
+}
+.counter1 h1{
+	font-size:20px;
+	font-weight:normal;
+}
+.login-mod {
+	width: 316px;
+}
+.login-form {
+	width: 316px;
+	margin-top: 5px;
+	background-color: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border:1px solid #e7e7eb;
+}
+.login-form div {
+	border: 1px solid #e7e7eb;
+	padding: 3px 0;
+}
+.login-form input {
+	width: 240px;
+	padding: 11px 0;
+	vertical-align: middle;
+	vertical-align: middle;
+	font-family: "Microsoft YaHei";
+	font-family: "Microsoft YaHei";
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+.login-form span {
+	margin: 0 15px;
+}
+.login-mod input {
+	border: 0;
+	outline: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	height:42px;
+}
+.icon-wrapper {
+	display: inline-block;
+	display: inline-block;
+	vertical-align: middle;
+	vertical-align: middle;
+	line-height: 0;
+}
+.icon_login.pwd {
+background: url("icon.png") 0 -28px no-repeat;
+width: 16px;
+height: 18px;
+vertical-align: middle;
+vertical-align: middle;
+display: inline-block;
+}
+.icon_login.un {
+background: url("icon.png") 0 0 no-repeat;
+width: 16px;
+height: 18px;
+vertical-align: middle;
+vertical-align: middle;
+display: inline-block;
+}

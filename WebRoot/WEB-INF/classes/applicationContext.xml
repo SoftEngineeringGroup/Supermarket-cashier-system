@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/market">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>hib/PayTable.hbm.xml</value>
+				<value>hib/TypeTable.hbm.xml</value>
+				<value>hib/AppTable.hbm.xml</value>
+				<value>hib/EmpTable.hbm.xml</value>
+				<value>hib/CheckTable.hbm.xml</value>
+				<value>hib/AttendTable.hbm.xml</value>
+				<value>hib/User.hbm.xml</value>
+				<value>hib/Client.hbm.xml</value>
+				<value>hib/Goods.hbm.xml</value>
+				<value>hib/Member.hbm.xml</value>
+				<value>hib/Salegoods.hbm.xml</value>
+				<value>hib/Counter.hbm.xml</value></list>
+		</property></bean>
+	<bean id="PayTableDAO" class="hib.PayTableDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="TypeTableDAO" class="hib.TypeTableDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="AppTableDAO" class="hib.AppTableDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="EmpTableDAO" class="hib.EmpTableDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CheckTableDAO" class="hib.CheckTableDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="AttendTableDAO" class="hib.AttendTableDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UserDAO" class="hib.UserDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ClientDAO" class="hib.ClientDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="GoodsDAO" class="hib.GoodsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="MemberDAO" class="hib.MemberDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SalegoodsDAO" class="hib.SalegoodsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CounterDAO" class="hib.CounterDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="EmpValide" class="service.impl.EmpValideImpl">
+	<property name="empDao">
+	<ref bean="EmpTableDAO"/>
+		</property>
+	</bean>
+	<bean id="UserService" class="service.impl.UserServiceImpl">
+		<property name="userDAO">
+			<ref bean="UserDAO" />
+		</property>
+	</bean>
+	<bean id="ClientService" class="service.impl.ClientServiceImpl">
+		<property name="clientDAO">
+			<ref bean="ClientDAO" />
+		</property>
+	</bean>
+	<bean id="GoodsService" class="service.impl.GoodsServiceImpl">
+		<property name="goodsDAO">
+			<ref bean="GoodsDAO" />
+		</property>
+	</bean>
+		<bean id="SalegoodsService" class="service.impl.SalegoodsServiceImpl">
+		<property name="salegoodsDAO">
+			<ref bean="SalegoodsDAO" />
+		</property>
+	</bean>
+		<bean id="MemberService" class="service.impl.MemberServiceImpl">
+		<property name="memberDAO">
+			<ref bean="MemberDAO" />
+		</property>
+	</bean>
+	</beans>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="default" extends="struts-default">
+<action name="Login"
+	class="action.LoginAction">
+	<result name="success">/Counter.jsp</result>
+	<result name="error">/index.jsp</result>
+</action>
+<action name="ShouYin"
+	class="action.ShouYinAction">
+	<result name="success">/ShouYin1.jsp</result>
+	<result name="error">/index.jsp</result>
+</action>
+<action name="CheckGoods"
+	class="action.PrintAction">
+	<result name="success">/SelectGoods.jsp</result>
+	<result name="error">/index.jsp</result>
+</action>
+<action name="Stock"
+	class="action.StockAction">
+	<result name="success">/stock.jsp</result>
+	<result name="error">/index.jsp</result>
+</action>
+<action name="ShouYin2"
+	class="action.ShouYin2Action">
+	<result name="success">/SelectGoods.jsp</result>
+	<result name="error">/index.jsp</result>
+</action>
+</package>
+</struts>    
